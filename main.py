@@ -28,13 +28,13 @@ User = Client(
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
     await event.reply_text(
-        "Hi, I am Messages Search Bot!\n\n"
-        "**Developer:** @AbirHasan2005\n"
-        "**Demo Bot:** @AHListBot",
+        "Hi, I am Messages Search Bot! of IMWS\n\n"
+        "**CHANNEL:** @IMWSmovies\n"
+        "**BACKUP:** @GodFather_Community",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-             InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
-            [InlineKeyboardButton("Developer - @AbirHasan2005")],
+            [InlineKeyboardButton("Support Group", url="https://t.me/MovieAndWeb_Discuss"),
+             InlineKeyboardButton("Channel", url="https://t.me/IMWSmovies")],
+            [InlineKeyboardButton("Backup - @GodFather_Community")],
             [InlineKeyboardButton("Search Inline", switch_inline_query_current_chat=""), InlineKeyboardButton("Go Inline", switch_inline_query="")]
         ])
     )
@@ -48,17 +48,17 @@ async def inline_handlers(_, event: InlineQuery):
         answers.append(
             InlineQueryResultArticle(
                 title="This is Inline Messages Search Bot!",
-                description="You can search Channel All Messages using this bot.",
+                description="You can search IMWS Channel All Messages using this bot.",
                 input_message_content=InputTextMessageContent(
-                    message_text="Using this Bot you can Search a Channel All Messages using this bot.\n\n"
-                                 "Made by @AbirHasan2005",
+                    message_text="Using this Bot you can Search IMWS Channel All Messages using this bot.\n\n"
+                                 "Made by @GodFather_Community",
                     disable_web_page_preview=True
                 ),
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("Search Here", switch_inline_query_current_chat="")],
-                    [InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                     InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
-                    [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")]
+                    [InlineKeyboardButton("Support Group", url="https://t.me/MovieAndWeb_Discuss"),
+                     InlineKeyboardButton("Channel", url="https://t.me/IMWSmovies")],
+                    [InlineKeyboardButton("Backup" , url="https://t.me/GodFather_Community")]
                 ])
             )
         )
